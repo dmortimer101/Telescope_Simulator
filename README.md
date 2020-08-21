@@ -32,10 +32,10 @@ If you are interested in diving into the physics behind this simulation here is 
 
  by setting the following variables:
  
- *telescope_focal_length_m* = the effective focal length of the simulated telescope 
- *angular_pixel_size_input_image* = the angular width of each pixel (for example if Jupiter is taken to be 50" in diameter on sky, devide this by the number of pixels accross it is in the input image) 
- *CCD_pixel_size* (in meters) 
- *CCD_pixel_count* 
+ 1. *telescope_focal_length_m* = the effective focal length of the simulated telescope 
+ 2. *angular_pixel_size_input_image* = the angular width of each pixel (for example if Jupiter is taken to be 50" in diameter on sky, devide this by the number of pixels accross it is in the input image) 
+ 3. *CCD_pixel_size* (in meters) 
+ 4. *CCD_pixel_count* 
  
  the input image is rescaled as if it were sampled by the above described detector attached to the above described telescope 
  
