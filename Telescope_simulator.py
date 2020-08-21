@@ -91,7 +91,7 @@ if __name__ == '__main__':
     input_image_name = "Hubble_Jupiter_image.png" #name of image, in quotation marks including file extension 
     telescope_diameter_m = 203e-3 #in meters
     telescope_focal_length_m = 1.2*3 #in meters
-    seeing_arcsec_500nm = 2 #in arcseconds
+    seeing_arcsec_500nm = 1.5 #in arcseconds
     zenith_angle_deg = 0 #in deg, zero being at the zenith 
     atmosphere = True #True or False, if True simulates atmospheric perturbations. If False simulates purely diffraction effects 
     angular_pixel_size_input_image = 0.05 #arcseconds/pixel (need to calculate this based on angular size of object, number of pixels and scope plate scale) pixel size = "/pixel * 1/plate_scale 
@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
     #simulation parameters
     Num_psfs_to_gen = 10 #number of psfs (and in turn output images) the run will generate 
-    pixels_per_ro = 7 #how well you wish to sample your phase screen, best leave this value as 7 (to ensure sufficient sampling while minimizing phase screen size) by default
+    pixels_per_ro = 20 #how well you wish to sample your phase screen, best leave this value as 7 (to ensure sufficient sampling while minimizing phase screen size) by default
 
     ##############################################
 
