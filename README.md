@@ -43,7 +43,9 @@ Use cases:
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Hubble_Jupiter_8_inch_diffraction_limited_Jupiter.png?raw=true" width="600" height="300" />
 
-  by setting atmosphere = False the image is rescaled as described above and processed to produce a diffraction limited image (the resolution obtainable with no atmospheric bluring) 
+Left: Hubble Jupiter image Right: Diffraction limited image for an 8" telescope 
+
+  by setting atmosphere = False the image is rescaled as described above and processed to produce a diffraction limited image
   
 3. Simulate varying levels of atmospheric seeing: 
 
