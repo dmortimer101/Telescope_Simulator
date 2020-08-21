@@ -8,7 +8,7 @@ Left: is the input, a image of Jupiter taken by the Hubble space telescope. Righ
 
 Above is an example of the simulation in action. Not only does this script resample the image, it also simulates the effects of diffraction limited resolution and perturbations due to atmospheric seeing. 
 
-Installation: 
+## Installation: 
 
 This script has the following dependencies 
 
@@ -26,9 +26,9 @@ All configurable variables are contained in the #### region below the line #Cont
  
 If you are interested in diving into the physics behind this simulation here is a talk about this simulation aimed at the level of the interested amateur. 
 
-Use cases: 
+## Use cases: 
 
-1. Field of view calculator 
+### 1. Field of view calculator 
 
  by setting the following variables:
  
@@ -39,7 +39,7 @@ Use cases:
  
  the input image is rescaled as if it were sampled by the above described detector attached to the above described telescope 
  
-2. Produce diffraction limited images for a given telescope: 
+ ### 2. Produce diffraction limited images for a given telescope: 
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Hubble_Jupiter_8_inch_diffraction_limited_Jupiter.png?raw=true" width="600" height="300" />
 
@@ -47,7 +47,7 @@ Left: Hubble Jupiter image Right: Diffraction limited image for an 8" telescope
 
   by setting atmosphere = False the image is rescaled as described above and processed to produce a diffraction limited image
   
-3. Simulate varying levels of atmospheric seeing: 
+### 3. Simulate varying levels of atmospheric seeing: 
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Jupiter_zenith_10_deg_above_horizon.gif?raw=true" width="600" height="300" />
 
@@ -56,7 +56,7 @@ By setting the variable seeing_arcsec_500nm you can vary how "good" the seeing i
  the variable zenith_angle_deg allows you to simulate how seeing degrades due to observing targets nearer the horizon (hence with an increase airmass). 0 degrees is a target at zenith, 90 degrees a target at the horizon  
 
 
-4. End to end astrophotography simulator 
+### 4. End to end astrophotography simulator 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/diffraction_limited_Jupiter_atm_perturbed_Jupiter_RegiStax_Jupiter.gif?raw=true" width="600" height="200" />
  
  Left: Diffraction limited image Middle: individual atmospherically perturbed frames Right: result of processing middle frames in RegiStax
@@ -64,12 +64,12 @@ By setting the variable seeing_arcsec_500nm you can vary how "good" the seeing i
  The output images can be used as simulated data for astrophotography image processing tools such as RegiStax to test how good an image can be recovered for given seeing conditions and a given number of images. 
   
   
-Future Updates: 
+## Future Updates: 
  
 1. Adaptive optics simulation 
 2. parallelisaion of image generation for efficency 
 
-Tips for usage: 
+## Tips for usage: 
 
 1. Ensure telescope_aperture_width_pixels (printed in terminal) is above 35 for a given configuration. This can be raised by increasing the variable pixels_per_ro.  
  
