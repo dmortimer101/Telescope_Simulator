@@ -4,7 +4,7 @@
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Jupiter_Hubble_plus_telescope_3.9m_focal_length_2micron_pixels.gif?raw=true" width="600" height="300" />
 
-Left: is the input, a image of Jupiter taken by the Hubble space telescope. Right: is the output of the simulation, the image of Jupiter as would be seen by a 8" telescope with a focal length of 1.2 meters, using a 3x barlow lens and a CCD with 2 micron sized pixels.
+Left: is the input, an image of Jupiter taken by the Hubble space telescope. Right: is the output of the simulation, the image of Jupiter as would be seen by an 8" telescope with a focal length of 1.2 meters, using a 3x Barlow lens and a CCD with 2-micron sized pixels.
 
 Above is an example of the simulation in action. Not only does this script resample the image, it also simulates the effects of diffraction limited resolution and perturbations due to atmospheric seeing. 
 
@@ -13,9 +13,10 @@ Above is an example of the simulation in action. Not only does this script resam
 This script has the following dependencies 
 
 1. numpy
-2. matplotlib
-3. scipy
-4. imageio
+2. MegaScreen
+3. matplotlib
+4. scipy
+5. imageio
 6. pillow
 
 All of which can be installed by the command pip install <module name>. All that is required to get started after that is to download this repo and run 
@@ -33,12 +34,12 @@ If you are interested in diving into the physics behind this simulation here is 
  by setting the following variables:
  
  1. *telescope_focal_length_m* = the effective focal length of the simulated telescope 
- 2. *angular_pixel_size_input_image* = the angular width of each pixel (for example if Jupiter is taken to be 50" in diameter on sky, devide this by the number of pixels accross it is in the input image) 
+ 2. *angular_pixel_size_input_image* = the angular width of each pixel (for example if Jupiter is taken to be 50" in diameter on sky, divide this by the number of pixels across it is in the input image) 
  3. *CCD_pixel_size* (in meters) 
  4. *CCD_pixel_count* 
  
- the input image is rescaled as if it were sampled by the above described detector attached to the above described telescope 
- 
+the input image is rescaled as if it were sampled by the above described detector attached to the above described telescope.   
+
  ### 2. Produce diffraction limited images for a given telescope: 
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Hubble_Jupiter_8_inch_diffraction_limited_Jupiter.png?raw=true" width="600" height="300" />
@@ -51,9 +52,10 @@ Left: Hubble Jupiter image. Right: Diffraction limited image for an 8" telescope
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Jupiter_zenith_10_deg_above_horizon.gif?raw=true" width="600" height="300" />
 
+Left: Jupiter observed at Zenith. Right: Jupiter observed 10 degrees above the horizon
 
-By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing is. 2 arcseconds is considered moderatly good for an amature site, 0.7 arcseconds is considered excelent for a professional observatory  
- the variable zenith_angle_deg allows you to simulate how seeing degrades due to observing targets nearer the horizon (hence with an increase airmass). 0 degrees is a target at zenith, 90 degrees a target at the horizon  
+By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing is. 2 arcseconds is considered moderately good for an amateur site, 0.7 arcseconds is considered excellent for a professional observatory  
+ the variable zenith_angle_deg allows you to simulate how seeing degrades due to observing targets nearer the horizon (hence with an increase airmass). 0 degrees is a target at zenith, 90 degrees a target at the horizon   
 
 
 ### 4. End to end astrophotography simulator 
@@ -67,7 +69,7 @@ By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing
 ## Future Updates: 
  
 1. Adaptive optics simulation 
-2. parallelisaion of image generation for efficency 
+2. parallelisation of image generation for efficiency 
 
 ## Tips for usage: 
 
