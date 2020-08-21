@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
     #simulation parameters
     Num_psfs_to_gen = 10 #number of psfs (and in turn output images) the run will generate 
-    pixels_per_ro = 20 #how well you wish to sample your phase screen, best leave this value as 7 (to ensure sufficient sampling while minimizing phase screen size) by default
+    pixels_per_ro = 30 #how well you wish to sample your phase screen, best leave this value as 7 (to ensure sufficient sampling while minimizing phase screen size) by default
 
     ##############################################
 
