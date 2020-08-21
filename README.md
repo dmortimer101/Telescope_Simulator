@@ -44,7 +44,7 @@ the input image is rescaled as if it were sampled by the above described detecto
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Hubble_Jupiter_8_inch_diffraction_limited_Jupiter.png?raw=true" width="600" height="300" />
 
-Left: Hubble Jupiter image. Right: Diffraction limited image for an 8" telescope 
+Left: Hubble Jupiter image. Right: Diffraction limited image for an 8" telescope.
 
   by setting *atmosphere = False* the image is rescaled as described above and processed to produce a diffraction limited image
   
@@ -52,7 +52,7 @@ Left: Hubble Jupiter image. Right: Diffraction limited image for an 8" telescope
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Jupiter_zenith_10_deg_above_horizon.gif?raw=true" width="600" height="300" />
 
-Left: Jupiter observed at Zenith. Right: Jupiter observed 10 degrees above the horizon
+Left: Jupiter observed at Zenith. Right: Jupiter observed 10 degrees above the horizon.
 
 By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing is. 2 arcseconds is considered moderately good for an amateur site, 0.7 arcseconds is considered excellent for a professional observatory  
  the variable zenith_angle_deg allows you to simulate how seeing degrades due to observing targets nearer the horizon (hence with an increase airmass). 0 degrees is a target at zenith, 90 degrees a target at the horizon   
@@ -61,7 +61,7 @@ By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing
 ### 4. End to end astrophotography simulator 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/diffraction_limited_Jupiter_atm_perturbed_Jupiter_RegiStax_Jupiter.gif?raw=true" width="600" height="200" />
  
- Left: Diffraction limited image. Middle: individual atmospherically perturbed frames. Right: result of processing middle frames in RegiStax
+ Left: Diffraction limited image. Middle: individual atmospherically perturbed frames. Right: result of processing middle frames in RegiStax.
  
  The output images can be used as simulated data for astrophotography image processing tools such as RegiStax to test how good an image can be recovered for given seeing conditions and a given number of images. 
   
