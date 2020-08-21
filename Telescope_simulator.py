@@ -92,7 +92,7 @@ if __name__ == '__main__':
     telescope_diameter_m = 203e-3 #in meters
     telescope_focal_length_m = 1.2*3 #in meters
     seeing_arcsec_500nm = 2 #in arcseconds
-    zenith_angle_deg = 60.0 #in deg, zero being at the zenith 
+    zenith_angle_deg = 0 #in deg, zero being at the zenith 
     atmosphere = True #True or False, if True simulates atmospheric perturbations. If False simulates purely diffraction effects 
     angular_pixel_size_input_image = 0.05 #arcseconds/pixel (need to calculate this based on angular size of object, number of pixels and scope plate scale) pixel size = "/pixel * 1/plate_scale 
     wavelength = 600e-9 #in meters 
