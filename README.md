@@ -32,10 +32,10 @@ If you are interested in diving into the physics behind this simulation here is 
 
  by setting the following variables:
  
- telescope_focal_length_m = the effective focal length of the simulated telescope 
- angular_pixel_size_input_image = the angular width of each pixel (for example if Jupiter is taken to be 50" in diameter on sky, devide this by the number of pixels accross it is in the input image) 
- CCD_pixel_size (in meters) 
- CCD_pixel_count 
+ *telescope_focal_length_m* = the effective focal length of the simulated telescope 
+ *angular_pixel_size_input_image* = the angular width of each pixel (for example if Jupiter is taken to be 50" in diameter on sky, devide this by the number of pixels accross it is in the input image) 
+ *CCD_pixel_size* (in meters) 
+ *CCD_pixel_count* 
  
  the input image is rescaled as if it were sampled by the above described detector attached to the above described telescope 
  
@@ -43,23 +43,23 @@ If you are interested in diving into the physics behind this simulation here is 
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Hubble_Jupiter_8_inch_diffraction_limited_Jupiter.png?raw=true" width="600" height="300" />
 
-Left: Hubble Jupiter image Right: Diffraction limited image for an 8" telescope 
+Left: Hubble Jupiter image. Right: Diffraction limited image for an 8" telescope 
 
-  by setting atmosphere = False the image is rescaled as described above and processed to produce a diffraction limited image
+  by setting *atmosphere = False* the image is rescaled as described above and processed to produce a diffraction limited image
   
 ### 3. Simulate varying levels of atmospheric seeing: 
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Jupiter_zenith_10_deg_above_horizon.gif?raw=true" width="600" height="300" />
 
 
-By setting the variable seeing_arcsec_500nm you can vary how "good" the seeing is. 2 arcseconds is considered moderatly good for an amature site, 0.7 arcseconds is considered excelent for a professional observatory  
+By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing is. 2 arcseconds is considered moderatly good for an amature site, 0.7 arcseconds is considered excelent for a professional observatory  
  the variable zenith_angle_deg allows you to simulate how seeing degrades due to observing targets nearer the horizon (hence with an increase airmass). 0 degrees is a target at zenith, 90 degrees a target at the horizon  
 
 
 ### 4. End to end astrophotography simulator 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/diffraction_limited_Jupiter_atm_perturbed_Jupiter_RegiStax_Jupiter.gif?raw=true" width="600" height="200" />
  
- Left: Diffraction limited image Middle: individual atmospherically perturbed frames Right: result of processing middle frames in RegiStax
+ Left: Diffraction limited image. Middle: individual atmospherically perturbed frames. Right: result of processing middle frames in RegiStax
  
  The output images can be used as simulated data for astrophotography image processing tools such as RegiStax to test how good an image can be recovered for given seeing conditions and a given number of images. 
   
@@ -71,5 +71,5 @@ By setting the variable seeing_arcsec_500nm you can vary how "good" the seeing i
 
 ## Tips for usage: 
 
-1. Ensure telescope_aperture_width_pixels (printed in terminal) is above 35 for a given configuration. This can be raised by increasing the variable pixels_per_ro.  
+1. Ensure *telescope_aperture_width_pixels* (printed in terminal) is above 35 for a given configuration. This can be raised by increasing the *variable pixels_per_ro*.  
  
