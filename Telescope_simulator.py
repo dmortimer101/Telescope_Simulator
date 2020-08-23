@@ -13,7 +13,7 @@ def Sum2d(a):
     return(np.sum(np.sum(a,-1),-1))
 
 def fried_parameter_cm(wavelength,arcseconds_of_seeing_500nm=1.,zenith_angle_deg = 0.):
-    """return fried parameter r0 in cm calculation taken from DFB Practical optical interferometry p58. 
+    """return Fried parameter r0 in cm calculation taken from DFB Practical optical interferometry p58. 
     Find constant of proportionality k using given r0=10cm at 500nm for 1 arcsecond seeing @500nm"""
     r0_500nm_cm = (500e-9/(arcseconds_of_seeing_500nm*(np.pi/(180*3600))))*100
     k = r0_500nm_cm/(500e-9)**(6./5)
@@ -24,7 +24,7 @@ def fried_parameter_cm(wavelength,arcseconds_of_seeing_500nm=1.,zenith_angle_deg
 
 def Circ_Aperture_Mask(propagator_size):
     """
-    Returns a square 2D array with dimensions propagator_size, and a circular mask who's diameter is the
+    Returns a square 2D array with dimensions propagator_size, and a circular mask with diameter the
     length of the input array
     """
 
@@ -43,7 +43,7 @@ def Circ_Aperture_Mask(propagator_size):
 
 def quick_complex_pupil(phaseScreen, array_to_propgate_size):
     """
-    Takes in the 2D phase screen, converts it to a complex amplitude and returns the complex amplitudes
+    Takes in the 2D phase screen, converts it to a complex amplitude and returns it
     """
 
     propagator_size = len(phaseScreen) # gets the dimension of the square phase screen grid 
@@ -73,7 +73,7 @@ def Focus_beam(Collimated_Pupil, pad_width = 0):
 
 def angular_to_physical_pixels(angular_pixel_size, focal_length): 
     """
-    Takes an angular pixel size in arcseconds/pixel ("/pixel) and converts this pixel size to meters/pixel
+    Takes an angular pixel size in arcseconds/pixel ("/pixel) and converts it to meters/pixel
     or whatever the units of focal length is. 
     """
     plate_scale = 206265/focal_length
@@ -97,11 +97,11 @@ if __name__ == '__main__':
     angular_pixel_size_input_image = 0.05 #arcseconds/pixel (need to calculate this based on angular size of object, number of pixels and scope plate scale) pixel size = "/pixel * 1/plate_scale 
     wavelength = 600e-9 #in meters 
     CCD_pixel_size = 2e-6 #in meters
-    CCD_pixel_count = 700 #number of pixels wide your simulated CCD is
+    CCD_pixel_count = 700 #The pixel width of your simulated CCD
 
     #simulation parameters
     Num_psfs_to_gen = 10 #number of psfs (and in turn output images) the run will generate 
-    pixels_per_ro = 30 #how well you wish to sample your phase screen, best leave this value as 7 (to ensure sufficient sampling while minimizing phase screen size) by default
+    pixels_per_ro = 30 #how well you wish to sample your phase screen
 
     ##############################################
 
@@ -109,6 +109,7 @@ if __name__ == '__main__':
     im = Image.open(input_image_name)
     im_array = np.asarray(im)
 
+    #makes image square if not square already by cropping
     if np.shape(im_array)[0] != np.shape(im_array)[1]:
 
         min_dim, max_dim = np.min((np.shape(im_array)[0],np.shape(im_array)[1])), np.max((np.shape(im_array)[0],np.shape(im_array)[1]))
