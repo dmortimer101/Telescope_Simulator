@@ -19,7 +19,7 @@ This script has the following dependencies
 5. imageio
 6. pillow
 
-All of which can be installed by the command pip install <module name>. All that is required to get started after that is to download this repo and run 
+All of which can be installed by the command pip install "module name". All that is required to get started after that is to download this repo and run 
 Telescope_simulator.py the script is configured to load the image Hubble_Jupiter_image.png by default and simulate the output of a 8" telescope as described above. 
  
 All configurable variables are contained in the #### region below the line #Contained within the ## below are the parameters you can modify to alter the simulation:
