@@ -54,8 +54,7 @@ Left: Hubble Jupiter image. Right: Diffraction limited image for an 8" telescope
 
 Left: Jupiter observed at Zenith. Right: Jupiter observed 10 degrees above the horizon.
 
-By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing is. 2 arcseconds is considered moderately good for an amateur site, 0.7 arcseconds is considered excellent for a professional observatory  
- the variable zenith_angle_deg allows you to simulate how seeing degrades due to observing targets nearer the horizon (hence with an increase airmass). 0 degrees is a target at zenith, 90 degrees a target at the horizon   
+By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing is. 2 arcseconds is considered moderately good for an amateur site, 0.7 arcseconds is considered excellent for a professional observatory. The variable *zenith_angle_deg allows* you to simulate how seeing degrades due to observing targets nearer the horizon (hence with an greater airmass). 0 degrees is a target at zenith, 90 degrees a target at the horizon.
 
 
 ### 4. End to end astrophotography simulator 
@@ -69,10 +68,11 @@ By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing
 ## Future Updates: 
  
 1. Adaptive optics simulation 
-2. parallelisation of image generation for efficiency 
+2. Parallelisation of image generation for efficiency 
 
 ## Tips for usage: 
 
-1. Ensure *telescope_aperture_width_pixels* (printed in terminal) is above 35 for a given configuration. This can be raised by increasing the *variable pixels_per_ro*.  
+1. Ensure *telescope_aperture_width_pixels* (printed in terminal) is above 35 for a given configuration. This can be raised by increasing the variable *pixels_per_ro*.  
+
 2. Objects with a large angular diameter (the width of the full moon or bigger) will return a monochromatic square. This is believed to be due to the fact that the psf is poorly sampled on images where the pixels are so large.
  
