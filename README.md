@@ -74,4 +74,5 @@ By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing
 ## Tips for usage: 
 
 1. Ensure *telescope_aperture_width_pixels* (printed in terminal) is above 35 for a given configuration. This can be raised by increasing the *variable pixels_per_ro*.  
+2. Objects with a large angular diameter (the width of the full moon or bigger) will return a monochromatic square. This is believed to be due to the fact that the psf is poorly sampled on images where the pixels are so large.
  
