@@ -24,8 +24,11 @@ Telescope_simulator.py the script is configured to load the image Hubble_Jupiter
  
 All configurable variables are contained in the #### region below the line #Contained within the ## below are the parameters you can modify to alter the simulation:
 
+## Talk: 
  
-If you are interested in diving into the physics behind this simulation here is a talk about this simulation aimed at the level of the interested amateur. 
+If you are interested in diving into the physics behind this simulation here is a talk aimed at the level of the interested amateur: 
+
+[![How to simulate a telescope (in python)](https://img.youtube.com/vi/SuoV_5ACOIo/0.jpg)](https://www.youtube.com/watch?v=SuoV_5ACOIo)
 
 ## Use cases: 
 
