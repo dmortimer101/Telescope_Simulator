@@ -1,5 +1,5 @@
 # Telescope_Simulator
- A python script for not just simulating the field of view but also atmospheric seeing and diffraction effects.
+ A python script for not just simulating the field of view but also atmospheric seeing and diffraction effects of a telescope.
 
 
 <img src="https://github.com/dmortimer101/Telescope_Simulator/blob/master/Images/Jupiter_Hubble_plus_telescope_3.9m_focal_length_2micron_pixels.gif?raw=true" width="600" height="300" />
