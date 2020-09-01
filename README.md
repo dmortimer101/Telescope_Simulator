@@ -8,6 +8,8 @@ Left: is the input, an [image of Jupiter](https://www.nasa.gov/feature/goddard/2
 
 Above is an example of the simulation in action. Not only does this script resample the image, it also simulates the effects of diffraction limited resolution and perturbations due to atmospheric seeing. 
 
+The script is written to be easy to read as it is in part used as a teaching tool. There are likely more efficient ways of writing this code but for the sake of clarity they have not been used. 
+
 ## Installation: 
 
 This script has the following dependencies 
