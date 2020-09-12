@@ -21,10 +21,21 @@ This script has the following dependencies
 5. imageio
 6. Pillow
 
-All of which can be installed by the command pip install "module name". All that is required to get started after that is to download this repo and run 
-Telescope_simulator.py the script is configured to load the image Hubble_Jupiter_image.png by default and simulate the output of a 8" telescope as described above. 
- 
-All configurable variables are contained in the #### region below the line #Contained within the ## below are the parameters you can modify to alter the simulation:
+All of which can be installed by the command pip install "module name". 
+
+## Usage: 
+
+This script is designed to be as simple as possible to get started with. Once the installation described above is complete *Telescope_simulator.py* can be run as is and will by default produce 10 images of Jupiter as seen by an 8 inch telescope with an effective 3.6-meter focal length under average seeing conditions. The parameters which can be reconfigured are under the comments *#physical parameters* (line 90) and *#simulation parameters* (line 102) in the main file, *Telescope_simulator.py*. There are descriptive comments alongside each parameter which are not repeated here however below is a suggested range for each parameter: 
+
+1. *telescope_diameter_m*: of order a few hundreds of mm upwards (100e-3 upwards). Due to the nature of how the atmospheric perturbations are simulated the upper limit on the diameter will depend on the level of seeing, with worse seeing reducing the maximum telescope diameter that can be simulated
+2. *telescope_focal_length_m*: of order a few hundreds of mm to a few meters (300e-3 to 5 meters) 
+3. *seeing_arcsec_500nm*: between 0.7 and 2 arcseconds is a typical range from excellent to moderately poor seeing 
+4. *zenith_angle_deg*: between 0 (at the zenith) and 70 (close to the horizon) degrees 
+5. *wavelength*: typically the visible wavelength range, 380-740 nanometers (380e-9 to 740e-9 meters)
+6. *CCD_pixel_size*: a few to a few tens of microns (1e-6 to 20e-6 meters) 
+7. *CCD_pixel_count*: A few hundred pixels
+8. *pixels_per_ro*: leave at 30 by default but always keep above 7 to ensure accuracy in simulating atmospheric perturbations 
+
 
 ## Talk: 
  
@@ -70,7 +81,7 @@ By setting the variable *seeing_arcsec_500nm* you can vary how "good" the seeing
  The output images can be used as simulated data for astrophotography image processing tools such as RegiStax to test how good an image can be recovered for given seeing conditions and a given number of images. 
   
   
-## Future Updates: 
+## Future updates: 
  
 1. Adaptive optics simulation 
 2. Parallelisation of image generation for efficiency 
