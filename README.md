@@ -14,12 +14,12 @@ The script is written to be easy to read as it is in part used as a teaching too
 
 This script has the following dependencies 
 
-1. numpy
+1. NumPy
 2. MegaScreen
-3. matplotlib
-4. scipy
+3. Matplotlib
+4. SciPy
 5. imageio
-6. pillow
+6. Pillow
 
 All of which can be installed by the command pip install "module name". All that is required to get started after that is to download this repo and run 
 Telescope_simulator.py the script is configured to load the image Hubble_Jupiter_image.png by default and simulate the output of a 8" telescope as described above. 
