@@ -115,8 +115,6 @@ if __name__ == '__main__':
         min_dim, max_dim = np.min((np.shape(im_array)[0],np.shape(im_array)[1])), np.max((np.shape(im_array)[0],np.shape(im_array)[1]))
 
         pixels_to_crop = max_dim - min_dim
-        test  = np.floor(pixels_to_crop/2)
-        test_2 = np.ceil(pixels_to_crop/2)
 
         if np.shape(im_array)[0] > np.shape(im_array)[1]:
             left, right = 0, np.shape(im_array)[1]
@@ -138,7 +136,7 @@ if __name__ == '__main__':
     ideal_pixel_size_pupil = (wavelength*telescope_focal_length_m)/(len(im_array)*pixel_size_input_image)
     #print("pixel_size_input_image", pixel_size_input_image)
 
-    r0_cm = fried_parameter_cm(wavelength,arcseconds_of_seeing_500nm=seeing_arcsec_500nm,zenith_angle_deg = zenith_angle_deg)
+    r0_cm = fried_parameter_cm(wavelength,arcseconds_of_seeing_500nm=seeing_arcsec_500nm,zenith_angle_deg=zenith_angle_deg)
     telescope_aperture_width_pixels = int(np.ceil((pixels_per_ro/(r0_cm*0.01))*telescope_diameter_m))
     Pixel_size_pupil_plane = telescope_diameter_m/telescope_aperture_width_pixels
 
