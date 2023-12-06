@@ -65,8 +65,7 @@ def Focus_beam(Collimated_Pupil, pad_width = 0):
 
     Collimated_Pupil_padded = np.pad(Collimated_Pupil,pad_width=int(pad_width),mode='constant') 
 
-    f = np.fft.fft2(Collimated_Pupil_padded) #must be complex amplitude going in here
-    fshift = np.fft.fftshift(f)
+    fshift = np.fft.fftshift(np.fft.fft2(np.fft.ifftshift(Collimated_Pupil_padded))) #must be complex amplitude going in here
     intensity_image = (np.abs(fshift))**2
     
     return intensity_image
